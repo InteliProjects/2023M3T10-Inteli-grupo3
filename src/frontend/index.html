@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	    <link rel="shortcut icon" href="/src/static/images/favicon.ico" type="image/x-icon">
+	    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Priz</title>
+</head>
+<body>
+    <header class="header">
+        <img src="{{ url_for('static', filename='images/cvm_logo.png') }}" height="70px" width="140px" id="cvm_header">
+        <img src="{{ url_for('static', filename='images/priz_logo.png') }}" height="80px" width="80px" id="priz_header">
+        <nav>
+            <ul>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="file-selector">
+            <h2>Carregue um arquivo CSV</h2>
+            <label for="file-input" class="file-label">Escolher arquivo</label>
+            <input type="file" id="file-input" class="file-input" accept=".css, .html">
+            <span class="file-name">Nenhum arquivo selecionado</span>
+        </div>
+        <div class="carteira-container">
+            <label for="carteira">Escolha uma carteira:</label>
+            <select id="carteira" name="carteira">
+                <option value="financeiro">Carteira Financeiro</option>
+                <option value="comercial">Carteira Comercial</option>
+                <option value="industrial">Carteira Industrial</option>
+                <option value="servicos">Carteira Serviços</option>
+            </select>
+        </div>
+        <div class="scrollbox" id="infoBox"></div>
+        <button type="button" class="button">Clique aqui</button>
+    </div>
